@@ -39,16 +39,12 @@ let
 in
 stdenv.mkDerivation (final: {
   pname = "quarto";
-  version = "1.7.34";
+  version = "1.9.37";
 
   src = fetchurl {
     url = "https://github.com/quarto-dev/quarto-cli/releases/download/v${final.version}/quarto-${final.version}-linux-amd64.tar.gz";
-    hash = "sha256-3WsDCkS5Y9AflLlpa6y6ca/DF4621RqcwQUzK3fqa5o=";
+    hash = "sha256-ePzZDpg+Pn2+Pw0ZIcwQJTweynuSwg3UvCo8G8oKmvU=";
   };
-
-  patches = [
-    ./deno2.patch
-  ];
 
   nativeBuildInputs = [
     makeWrapper
